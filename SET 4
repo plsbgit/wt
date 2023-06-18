@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    table {
+      width: 100%;
+      text-align: center;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: lightgrey;
+      font-weight: bold;
+    }
+
+    .recommended {
+      background-color: #ffd700;
+      color: #fff;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <th></th>
+      <th>Basic</th>
+      <th>Standard</th>
+      <th class="recommended">Premium</th>
+    </tr>
+    <tr>
+      <td>Price</td>
+      <td>$9.99</td>
+      <td>$19.99</td>
+      <td class="recommended">$29.99</td>
+    </tr>
+    <tr>
+      <td>Storage</td>
+      <td>10GB</td>
+      <td>25GB</td>
+      <td class="recommended">50GB</td>
+    </tr>
+    <tr>
+      <td>Users</td>
+      <td>1</td>
+      <td>5</td>
+      <td class="recommended">Unlimited</td>
+    </tr>
+    <tr>
+      <td>Support</td>
+      <td>Email</td>
+      <td>Email</td>
+      <td class="recommended">24/7</td>
+    </tr>
+  </table>
+</body>
+</html>
+------------------------------------------------------------------------------------------------------------------------------------------------
+<html>
+<head>
+ <script>
+ function isLeapYear() {
+ var year = prompt("Enter a year:");
+ 
+ // Validate user input
+ if (year === null || isNaN(year)) {
+ alert("Invalid input. Please enter a valid year.");
+ return;
+ }
+ year = parseInt(year);
+ // Check if the year is a leap year
+ if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+ alert(year + " is a leap year.");
+ } else {
+ alert(year + " is not a leap year.");
+ }
+ }
+ </script>
+</head>
+<body>
+ <button onclick="isLeapYear()">Check Leap Year</button>
+</body>
+</html>
+-----------------------------------------------------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    function displaySelectedLanguages() {
+      var selectedLanguages = [];
+      var checkboxes = document.getElementsByName("languages");
+
+      for (var i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i].checked) {
+          selectedLanguages.push(checkboxes[i].value);
+        }
+      }
+
+      if (selectedLanguages.length > 0) {
+        alert("Selected languages: " + selectedLanguages.join(", "));
+      } else {
+        alert("No languages selected.");
+      }
+    }
+  </script>
+</head>
+<body>
+  <form onsubmit="displaySelectedLanguages(); return false;">
+    <label for="java">Java</label>
+    <input type="checkbox" name="languages" value="Java">
+
+    <label for="python">Python</label>
+    <input type="checkbox" name="languages" value="Python">
+
+    <label for="javascript">JavaScript</label>
+    <input type="checkbox" name="languages" value="JavaScript">
+
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
