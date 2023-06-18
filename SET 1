@@ -1,0 +1,132 @@
+          A
+    
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    input,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <pre>
+    <form action="" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" >
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" >
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" ></textarea>
+
+      <button type="submit" >Submit</button>
+    </form>
+  </pre>
+</body>
+</html>    
+
+            B
+
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    function validatePassword() {
+      var passwordInput = document.getElementById('password');
+      var password = passwordInput.value;
+      var hasUpperCase = /[A-Z]/.test(password);
+      var hasLowerCase = /[a-z]/.test(password);
+      var hasNumber = /[0-9]/.test(password);
+      if (password.length < 8 || !hasUpperCase || !hasLowerCase || !hasNumber) {
+        passwordInput.setCustomValidity('Password must contain at least 8 characters, including at least one uppercase letter, one lowercase letter, and one numeric digit.');
+      } else {
+        passwordInput.setCustomValidity('');
+      }
+    }
+  </script>
+</head>
+<body>
+  <form>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" oninput="validatePassword()" required>
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
+
+    C
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+    }
+    tr:nth-child(even) {
+      background-color: pink;
+    }
+    tr:nth-child(odd) {
+      background-color: lightblue;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <td>R1,C1</td>
+      <td>R1,C2</td>
+      <td>R1,C3</td>
+      <td>R1,C4</td>
+      <td>R1,C5</td>
+    </tr>
+    <tr>
+      <td>R2,C1</td>
+      <td>R2,C2</td>
+      <td>R2,C3</td>
+      <td>R2,C4</td>
+      <td>R2,C5</td>
+    </tr>
+    <tr>
+      <td>R3,C1</td>
+      <td>R3,C2</td>
+      <td>R3,C3</td>
+      <td>R3,C4</td>
+      <td>R3,C5</td>
+    </tr>
+    <tr>
+      <td>R4,C1</td>
+      <td>R4,C2</td>
+      <td>R4,C3</td>
+      <td>R4,C4</td>
+      <td>R4,C5</td>
+    </tr>
+    <tr>
+      <td>R5,C1</td>
+      <td>R5,C2</td>
+      <td>R5,C3</td>
+      <td>R5,C4</td>
+      <td>R5,C5</td>
+    </tr>
+  </table>
+</body>
+</html>
