@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    
+    .navbar {
+      background-color: #f1f1f1;
+      overflow: hidden;
+    }
+
+    .navbar a {
+      float: left;
+      display: block;
+      color: #555555;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .navbar a:hover {
+      background-color: #ddd;
+    }
+
+    .navbar a.active {
+      background-color: #4CAF50;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="#" class="active">Home</a>
+    <a href="#" class="active">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </div>
+</body>
+</html>
+----------------------------------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    function generateRandomPassword() {
+      var length = parseInt(prompt("Enter the desired length of the password:"));
+      var charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_-+=<>?";
+
+      var password = "";
+      for (var i = 0; i < length; i++) {
+        var randomIndex = Math.floor(Math.random() * charset.length);
+        password += charset.charAt(randomIndex);
+      }
+
+      document.getElementById("password").innerHTML = "Generated Password: " + password;
+    }
+  </script>
+</head>
+<body>
+  <button onclick="generateRandomPassword()">Generate Password</button>
+  <p id="password"></p>
+</body>
+</html>
+----------------------------------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    function updateTextInput() {
+      var rangeValue = document.getElementById("myRange").value;
+      document.getElementById("textInput").value = rangeValue;
+    }
+  </script>
+</head>
+<body>
+  <form>
+    <label for="myRange">Range:</label>
+    <input type="range" id="myRange" min="0" max="100" oninput="updateTextInput()">
+
+    <label for="textInput">Value:</label>
+    <input type="text" id="textInput" readonly>
+  </form>
+</body>
+</html>
