@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .card {
+      max-width: 300px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin: 20px;
+      padding: 20px;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      font-size: 18px;
+      margin: 0;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #888888;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="image.jpg" alt="Image">
+    <h3>Title</h3>
+    <p>Description:</p>
+  </div>
+</body>
+</html>
+
+-------------------------------------------------------------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    function calculateFactorial() {
+      var num = parseInt(prompt("Enter a number:"));
+      var factorial = 1;
+
+      if (!isNaN(num)) {
+        for (var i = 1; i <= num; i++) {
+          factorial *= i;
+        }
+        alert("The factorial of " + num + " is " + factorial);
+      } else {
+        alert("Invalid input. Please enter a valid number.");
+      }
+    }
+  </script>
+</head>
+<body>
+  <button onclick="calculateFactorial()">Calculate Factorial</button>
+</body>
+</html>
+---------------------------------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    function displaySelectedOption() {
+      var dropdown = document.getElementById('myDropdown');
+      var selectedOption = dropdown.options[dropdown.selectedIndex].value;
+      alert("Selected option: " + selectedOption);
+    }
+  </script>
+</head>
+<body>
+  <form>
+    <label for="myDropdown">Select an option:</label>
+    <select id="myDropdown">
+      <option value="Option 1">Option 1</option>
+      <option value="Option 2">Option 2</option>
+      <option value="Option 3">Option 3</option>
+      <option value="Option 4">Option 4</option>
+    </select>
+
+    <button type="button" onclick="displaySelectedOption()">Submit</button>
+  </form>
+</body>
+</html>
